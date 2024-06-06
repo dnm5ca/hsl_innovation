@@ -4154,3 +4154,11 @@ input, select, textarea {
 		}
 
 	}
+
+	details {
+		transition: 0.2s background linear;
+	  }
+	  
+	  details:hover {
+		background: rgba(107, 106, 106, 0.377);
+	  }
