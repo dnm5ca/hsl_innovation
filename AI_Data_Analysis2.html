@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Intro to Generative AI & Data Analysis</h2>
+								<p>With the increase in popularity of generative AI chatbots, people have begun to use them to assist with programming and data analysis. Let's look at a few ways you can implement generative AI into your programming and data analysis worflows.</p>
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+
+
+									<section>
+										<h2 class="major">A new data analyst assistant: ChatGPT 3</h2>
+										<p><b>This tutorial will be using ChatGPT 3, but the concepts will be applicable to other generative AI (GenAI) models. With ChatGPT 3 , you cannot upload files (text, excel, etc.) or run code directly in the browser, so it has more limited capabilities for data analysis. However, there are still ways you can use ChatGPT 3 to assist in your data analysis such as: </p>
+
+											<li>Help to debug code or interpret error messages  </li>
+											<li>Asking for clarity on how code works </li>
+											<li>Adding comments or documentation to your code </li>
+											<li>Converting from one programming language to another </li>
+											<li>Regular expressions </li>
+											<li>Starting from scratch </li>
+									</section>
+
+									<section>
+									
+										<h2 class="major" style="margin-top: 30px;padding-top: 30px;">Tutorial: Debugging an R Script</h2>
+														
+										<p style="margin-bottom: 10px;padding-bottom: 10px;">Scenario: You are a researcher new to R programming. You are trying to calculate some simple summary statistics, but are recieving an error message. Since you're not familar with R, you'd like help debugging your code. You decide to ask ChatGPT to help fix your code, so you can calculate the mean salary for different workplaces. </p>
+										
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">Providing context about who you are and what you're trying to accomplish can help achieve better results from a LLM. You can also define a role for the LLM to model its responses after as well. If you're new to using GenAI or are not familar with how context relates to GenAI, you can review these concepts on here. I will start by providing context about who I am and what I am trying to accomplish. I will also specify that I prefer concise language.   </p>
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Specifying context </summary>
+											<img src = "images/followup.png" width="100%" />
+										</details>	
+
+										<p></p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">Next I will provide additional details on the task I want ChatGPT 3 to perform. Providing additonal details in your initial prompt can help improve results, but you can also provide additonal guidance in future prompts to help refine results as well. </p>
+
+										<p style="margin-top: 5px;padding-top: 5px;margin-bottom: 0px;padding-bottom: 0px;">For this example, I will provide my R code and the error message I recieved to ChatGPT 3. When copying multiple pieces of information in can be helpful to separate the different parts of the prompt with new lines or quotations.  </p>
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Instructions </summary>
+											<img src = "images/ChatGPT3_2.png" width="100%" />
+										</details>
+
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGPT 3 Response </summary>
+											<img src = "images/ChatGPT3_3.png" width="100%" />
+										</details>
+									
+										<p></p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">ChatGPT 3 suggests that there may be non-numeric values in the ‘salary’ column. We were expecting salary to only contain numeric data, so why would R be treating it like non-numeric data? If there are non-numeric values, how do we correct this? <b>Remember you should treat this like a conversation, so let’s follow up with additional questions. </p>
+									
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Follow-up Question</summary>
+											<img src = "images/ChatGPT3_4.png" width="100%" />
+										</details>
+									
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGPT 3 Response</summary>
+											<img src = "images/ChatGPT3_5.png" width="100%" />
+										</details>
+
+										<p></p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">ChatGPT 3 provides some information on why there might be non-numeric data and how we can check for it. When I run the code it suggested, I can see that there are several values that say "Not Reported". I want to be sure there aren’t more unexpected values in my dataset, so I ask ChatGPT 3how to search specifically for non-numeric entries.  </p>
+									
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary>Follow-up Question</summary>
+											<img src = "images/ChatGPT3_6.png" width="100%" />
+										</details>
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGTP 3 Response</summary>
+											<img src = "images/ChatGPT3_7.png" width="100%" />
+										</details>
+
+
+										<p></p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">Now ChatGPT 3 provides code that uses regular expressions to search for any non-numeric values in the salary column. In fact, ChatGPT and LLMs in general are known for being particularly helpful with regular expressions or manipulating text. If you’re not familiar with regular expressions, you can always ask ChatGPT for additional details.    </p>
+									
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Follow-up Question</summary>
+											<img src = "images/ChatGPT3_8.png" width="100%" />
+										</details>
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGTP 3 Response</summary>
+											<img src = "images/ChatGPT3_9.png" width="100%" />
+										</details>
+
+
+										<p></p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;"">ChatGPT 3 has provided a nice explanation of what the grepl function does, the regular expression pattern that it used, and how that was implemented in our specific code.  </p>
+									    <p style="margin-bottom: 0px;padding-bottom: 0px;"">If you were satisfied with the explanation and wanted to make sure you remembered how this code worked in the future, you could ask ChatGPT 3 for help with writing additional comments.   </p>
+									
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Ask for documentation</summary>
+											<img src = "images/ChatGPT3_10.png" width="100%" />
+										</details>
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary>ChatGTP 3 Response</summary>
+											<img src = "images/ChatGPT3_11.png" width="100%" />
+										</details>
+
+
+										<p></p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;"">In this example, we were asking for clarity on code produced by ChatGPT, but we could also use this to better understand code written by colleagues or publicly available code. You could also use ChatGPT to help comment scripts you’ve written entirely by yourself.   </p>
+									    <p style="margin-bottom: 0px;padding-bottom: 0px;"">Another useful thing you can do with ChatGPT 3 is ask it to convert code between different languages. So far, we’ve been writing code in R, but perhaps you’re more familiar with Python. We can ask ChatGPT 3 to write this as Python code instead. </p>
+									
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Convert between programming languages</summary>
+											<img src = "images/ChatGPT3_12.png" width="100%" />
+										</details>
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary>ChatGTP 3 Response</summary>
+											<img src = "images/ChatGPT3_13.png" width="100%" />
+										</details>
+								
+
+										<p></p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">Just like that, we have a Python script!</p>
+
+										<p style="margin-top: 5px;padding-top: 5px;">For this tutorial, we started from pre-existing R code. If you were starting from scratch, you could describe your dataset to ChatGPT 3 and have it generate code that you would then copy and run locally. Instead of showing an example of that, in the next tutorial we will discuss ChatGPT 4 which allows you to upload files and run Python code in the browser. </p>
+										
+								
+										
+									</section>
+
+
+									<section>
+										<h2 class="major">Key takeaways</h2>
+										<p>ChatGPT and other GenAI models can be helpful in your data analysis, but there are certain things you must remember when using it:</p>
+											<li>Providing context or assigning a role can help improve results</li>
+											<li>This is an iterative process and you will most likely have to ask followup questions</li>
+											<li>Never accept results without verifying them</li>
+											<li>Rememeber these tools are still evolving</li>
+									</section>
+
+
+
+								
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
