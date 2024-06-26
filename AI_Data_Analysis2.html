@@ -23,7 +23,10 @@
 						<header>
 							<div class="inner">
 								<h2>Intro to Generative AI & Data Analysis</h2>
-								<p>With the increase in popularity of generative AI chatbots, people have begun to use them to assist with programming and data analysis. Let's look at a few ways you can implement generative AI into your programming and data analysis worflows.</p>
+								<p>With the increase in popularity of generative AI chatbots, people have begun to use them to assist with programming and data analysis. Let's look at a few ways you can implement generative AI into your programming and data analysis workflows.</p>
+								
+								<img src = "images/GeneralImage.png" width="40%" class ="center" />
+	
 							</div>
 						</header>
 
@@ -35,7 +38,7 @@
 
 									<section>
 										<h2 class="major">A new data analyst assistant: ChatGPT 3</h2>
-										<p><b>This tutorial will be using ChatGPT 3, but the concepts will be applicable to other generative AI (GenAI) models. With ChatGPT 3 , you cannot upload files (text, excel, etc.) or run code directly in the browser, so it has more limited capabilities for data analysis. However, there are still ways you can use ChatGPT 3 to assist in your data analysis such as: </p>
+										<p>This tutorial will be using ChatGPT 3, but the concepts will be applicable to other generative AI (GenAI) models. With ChatGPT 3 , you cannot upload files (text, excel, etc.) or run code directly in the browser, so it has more limited capabilities for data analysis. However, there are still ways you can use ChatGPT 3 to assist in your data analysis such as: </p>
 
 											<li>Help to debug code or interpret error messages  </li>
 											<li>Asking for clarity on how code works </li>
@@ -43,15 +46,17 @@
 											<li>Converting from one programming language to another </li>
 											<li>Regular expressions </li>
 											<li>Starting from scratch </li>
+										<p></p>
+										<img src = "images/Overview.png" width="75%" class ="center"/>
 									</section>
 
 									<section>
 									
 										<h2 class="major" style="margin-top: 30px;padding-top: 30px;">Tutorial: Debugging an R Script</h2>
 														
-										<p style="margin-bottom: 10px;padding-bottom: 10px;">Scenario: You are a researcher new to R programming. You are trying to calculate some simple summary statistics, but are recieving an error message. Since you're not familar with R, you'd like help debugging your code. You decide to ask ChatGPT to help fix your code, so you can calculate the mean salary for different workplaces. </p>
+										<p style="margin-bottom: 10px;padding-bottom: 10px;">Scenario: You are a researcher new to R programming. You are trying to calculate some simple summary statistics, but are receiving an error message. Since you're not familiar with R, you'd like help debugging your code. You decide to ask ChatGPT to help fix your code, so you can calculate the mean salary for different workplaces. </p>
 										
-										<p style="margin-bottom: 0px;padding-bottom: 0px;">Providing context about who you are and what you're trying to accomplish can help achieve better results from a LLM. You can also define a role for the LLM to model its responses after as well. If you're new to using GenAI or are not familar with how context relates to GenAI, you can review these concepts on here. I will start by providing context about who I am and what I am trying to accomplish. I will also specify that I prefer concise language.   </p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">Providing context about who you are and what you're trying to accomplish can help achieve better results from a LLM. You can also define a role for the LLM to model its responses after as well. If you're new to using GenAI or are not familiar with how context relates to GenAI, you can review these concepts on here. I will start by providing context about who I am and what I am trying to accomplish. I will also specify that I prefer concise language.   </p>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Specifying context </summary>
@@ -59,9 +64,13 @@
 										</details>	
 
 										<p></p>
-										<p style="margin-bottom: 0px;padding-bottom: 0px;"">Next I will provide additional details on the task I want ChatGPT 3 to perform. Providing additonal details in your initial prompt can help improve results, but you can also provide additonal guidance in future prompts to help refine results as well. </p>
+										<img src = "images/Context.png" width="50%"  class="center"/>
 
-										<p style="margin-top: 5px;padding-top: 5px;margin-bottom: 0px;padding-bottom: 0px;">For this example, I will provide my R code and the error message I recieved to ChatGPT 3. When copying multiple pieces of information in can be helpful to separate the different parts of the prompt with new lines or quotations.  </p>
+
+										<p></p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">Next I will provide additional details on the task I want ChatGPT 3 to perform. Providing additional details in your initial prompt can help improve results, but you can also provide additional guidance in future prompts to help refine results as well. </p>
+
+										<p style="margin-top: 5px;padding-top: 5px;margin-bottom: 0px;padding-bottom: 0px;">For this example, I will provide my R code and the error message I received to ChatGPT 3. When copying multiple pieces of information in can be helpful to separate the different parts of the prompt with new lines or quotations.  </p>
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Instructions </summary>
 											<img src = "images/ChatGPT3_2.png" width="100%" />
@@ -74,7 +83,7 @@
 										</details>
 									
 										<p></p>
-										<p style="margin-bottom: 0px;padding-bottom: 0px;"">ChatGPT 3 suggests that there may be non-numeric values in the ‘salary’ column. We were expecting salary to only contain numeric data, so why would R be treating it like non-numeric data? If there are non-numeric values, how do we correct this? <b>Remember you should treat this like a conversation, so let’s follow up with additional questions. </p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">ChatGPT 3 suggests that there may be non-numeric values in the ‘salary’ column. We were expecting salary to only contain numeric data, so why would R be treating it like non-numeric data? If there are non-numeric values, how do we correct this? <b>Remember you should treat this like a conversation, so let’s follow up with additional questions.</b> </p>
 									
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Follow-up Question</summary>
@@ -95,7 +104,7 @@
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
-											<summary> ChatGTP 3 Response</summary>
+											<summary> ChatGPT 3 Response</summary>
 											<img src = "images/ChatGPT3_7.png" width="100%" />
 										</details>
 
@@ -109,7 +118,7 @@
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
-											<summary> ChatGTP 3 Response</summary>
+											<summary> ChatGPT 3 Response</summary>
 											<img src = "images/ChatGPT3_9.png" width="100%" />
 										</details>
 
@@ -124,7 +133,7 @@
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
-											<summary>ChatGTP 3 Response</summary>
+											<summary>ChatGPT 3 Response</summary>
 											<img src = "images/ChatGPT3_11.png" width="100%" />
 										</details>
 
@@ -139,7 +148,7 @@
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
-											<summary>ChatGTP 3 Response</summary>
+											<summary>ChatGPT 3 Response</summary>
 											<img src = "images/ChatGPT3_13.png" width="100%" />
 										</details>
 								
@@ -160,7 +169,7 @@
 											<li>Providing context or assigning a role can help improve results</li>
 											<li>This is an iterative process and you will most likely have to ask followup questions</li>
 											<li>Never accept results without verifying them</li>
-											<li>Rememeber these tools are still evolving</li>
+											<li>Remember these tools are still evolving</li>
 									</section>
 
 
