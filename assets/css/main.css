@@ -4154,30 +4154,3 @@ input, select, textarea {
 		}
 
 	}
-
-	details {
-		transition: 0.2s background linear;
-	  }
-	  
-	  details:hover {
-		background: rgba(107, 106, 106, 0.377);
-	  }
-
-	.center {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	figure {
-		display: inline-block;
-		
-		margin: 20px; /* adjust as needed */
-	}
-	figure img {
-		vertical-align: top;
-	}
-	figure figcaption {
-		
-		text-align: center;
-	}
