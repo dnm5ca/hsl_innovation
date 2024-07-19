@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Overview of large language models</h2>
+								<p>Large Language Models (LLMs) are at the forefront of natural language processing technology. This page offers a concise exploration into how LLMs function, their predictive capabilities, the intricacies of tokenization and context, and why they don't always produce the same results</p>
+
+								<img src = "images/GeneralImage.png" width="40%" class ="center" />
+								
+	
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+
+
+									<section>
+										<h2 class="major">How do LLMs work?</h2>
+										<p>Large language models (LLMs) are advanced deep learning models designed to generate human-like language. They are trained on vast amounts of text, often sourced from publicly available internet resources. The training process has two main stages. First, LLMs are pre-trained on large generic datasets to predict the next word in a sentence. Then, they undergo fine-tuned with specific knowledge bases to enhance their performance or focus on specific tasks. You can find more details on fine-tuning LLMs found <a href = "https://www.edps.europa.eu/data-protection/technology-monitoring/techsonar/large-language-models-llm_en#:~:text=The%20vast%20majority%20of%20the,but%20also%20of%20other%20individuals">here.</a></p>
+
+										<figure>
+											<img src='images/LLM_Details/llm_parrot2.png' alt='missing' width="75%" class ="center" />
+											<figcaption class ="center">Supervised Finetuning on LLMs. Source: <a href = "https://neo4j.com/developer-blog/fine-tuning-retrieval-augmented-generation/">Neo4j</a></figcaption>
+										</figure>
+										
+									</section>
+
+								
+									<section>
+									
+										<h2 class="major" style="margin-top: 30px;padding-top: 30px;">LLMs: Predicting the next word</h2>
+														
+										<p style="margin-bottom: 10px;padding-bottom: 10px;">To understand how these models work, it's important to know what they take in and what they produce. Broadly, LLMs are trained to take a series of words as input and predict the next word as output. We can get a sense of this process using the Google Books Ngram Viewer. This online tool charts the frequencies of word sets based on printed sources published between 1500 and 2019.</p>
+										
+										<p>Let's take the phrase "I go to ___." Even without additional data, you might guess "I go to school" or "I go to sleep." Now, let's see what the Google Books Ngram Viewer suggests for filling in the blank.</p>
+
+										<img src = "images/LLM_Details/ngrams1.png" width="75%" class ="center"/>
+
+										<p>Based on this data, we can see that the most common word after "I go to" is actually "the," but "I go to sleep" is still in the top 5 phrases. We could continue by asking what word is most likely to follow "I go to the ___." </p>
+										<img src = "images/LLM_Details/ngrams2.png" width="75%" class ="center"/>
+
+
+										<p>In this example, we're using a specific phrase and the Google Books Ngram dataset, but LLMs operate similarly with the data they are trained on. Generally, the process looks like this: </p>
+
+										<img src="images/LLM_Details/NextWord.png"  width="75%" class ="center"/>
+
+										<p>This kind of text prediction works not only with natural language but also with programming languages. This broadens LLMs' capabilities, enabling them to assist with coding as well as answering questions. </p>
+
+									</section>
+
+									<section>
+									    <h2 class="major" style="margin-top: 30px;padding-top: 30px;">Tokenization and Context </h2>
+
+										<p>In the example above, we used a series of words as input, but actually, the text first goes through a process called tokenization. During tokenization, text is broken down into smaller pieces called tokens, which can be individual words or sub-words. These tokens are then converted into numeric IDs. For instance, the word "talking" might be split into "talk" and "ing." On average, one token is roughly four English characters, so 100 tokens are about 75 words.  </p>
+										
+										<figure>
+											<img src='images/LLM_Details/tokenization.png' alt='missing' width="75%" class ="center" />
+											<figcaption class ="center">Source: <a href = "https://platform.openai.com/tokenizer">OpenAI Tokenizer</a></figcaption>
+										</figure>
+
+										<p>This process converts messy text data into a more structured format that the model can understand. It also helps the model define relationships between words because the numeric token IDs can be treated as coordinates, with the distance between them representing how related those words are. You can find a more detailed explanation of the role of tokenization in LLMs <a href ="https://cset.georgetown.edu/article/the-surprising-power-of-next-word-prediction-large-language-models-explained-part-1/">here.</a></p>
+
+										<p>Currently, LLMs have a limit on the number of tokens they can process at once, known as the context window. Larger context windows can help achieve better results. For example, we could extend our test phrase to, "I’m so tired from waking up at 5am every day that as soon as I get home, I go to ___." With this additional context, it makes more sense for the next word to be "sleep" or "bed." </p>
+
+										<p>The context window can also be thought of as how much the model can remember at once. For instance, you could start a chat session with an LLM and request it always respond with a haiku. However, if you have an extended conversation that exceeds the context window, the model would "forget" your request for haikus because it is no longer part of the context. Additionally, models are starting to allow uploads of files like PDFs, Word documents, or spreadsheets, which may also count towards the context window limit. Currently, GPT-4 has a context window of 32K tokens, and Claude has a context window of 200K tokens. As models improve, context windows are getting longer.</p>
+
+
+									</section>
+
+									<section>
+
+										<h2 class="major" style="margin-top: 30px;padding-top: 30px;">Why aren't LLMs deterministic? </h2>
+
+										<p>One of the reasons you get different results each time you prompt an LLM is because modern LLMs use top-p or nucleus sampling. Top-p sampling works by defining a threshold probability, and tokens with a cumulative probability that exceeds this threshold form the "nucleus." The probabilities for these selected words are normalized so that their cumulative probability equals one, and then proportional sampling is used to choose the next word. This method allows for more diversity in text generation and is part of the reason why LLMs are not deterministic. By adjusting the cumulative probability threshold, the results can become more random or more predictable.  </p>
+										
+										<img src = "images/LLM_Details/top_p.png" width="75%" class ="center" />
+
+										<p></p>
+										<p>Another factor affecting the output generated by LLMs is the temperature setting, which helps control whether the output is more random or more predictable. The temperature setting accomplishes this by adjusting the distribution of probabilities. Temperature values range from zero to two, with lower values making the model more deterministic. If the temperature is set to zero, the token with the highest probability is always selected. This means, in the previous example, "the" would always be chosen. As the temperature approaches two, the differences in probabilities between the words in the nucleus are reduced, making them more equally likely to be chosen. You can find more details on top-p sampling and the temperature setting <a href = "https://medium.com/@duwalamit/mastering-llm-parameters-a-deep-dive-into-temperature-top-k-and-top-p-623b6aa2e6e5">here.</a></p>
+
+										<img src = "images/LLM_Details/Temp.png" width="75%" class ="center" />
+										
+									</section>
+
+									<section>
+
+										<h2 class="major" style="margin-top: 30px;padding-top: 30px;">Key takeways and definitions:</h2>
+
+										<ul >
+											<li>During pre-training, LLMs are trained to predict the next word in a series  
+											<ul style="margin-bottom: 0px;padding-bottom: 0px;">
+												<li>Words are first converted to tokens with numeric IDs to create a structured input</li>
+												<li style="margin-bottom: 0px;padding-bottom: 0px;">Each LLM will have a limit on the number of tokens it can accept/remember which is called the context window</li>
+											</ul></li>
+											<li style="margin-top: 0px;padding-top: 0px;">There are additional parameters such as top-p and temperature which control how random or deterministic the output is</li>
+											<li>After pre-training, LLMs go through fine-tuning to improve model output or to focus on a specific task </li>
+										</ul>
+
+										<p style="margin-bottom: 1px;padding-bottom: 1px;"><b>Pre-training: </b>Initial phase of training where a broad understanding of language is learned</p>
+										<p style="margin-bottom: 1px;padding-bottom: 1px;"><b>Fine-tuning:  </b>Pre-trained models are further developed to focus on a specific task</p>
+										<p style="margin-bottom: 1px;padding-bottom: 1px;"><b>Token:  </b>Input and output of LLMs which represent words, sub-words, or characters</p>
+										<p style="margin-bottom: 1px;padding-bottom: 1px;"><b>Context window:  </b>The number of tokens a LLM can accept as input or remember</p>
+										<p style="margin-bottom: 1px;padding-bottom: 1px;"><b>Top-P:  </b>Sampling method used by many LLMs where only tokens with a certain cumulative probability are considered</p>
+										<p style="margin-bottom: 1px;padding-bottom: 1px;"><b>Temperature:  </b>A parameter in LLMs that controls the randomness of the generated responses</p>
+
+
+									</section>
+
+									
+
+
+									
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
