@@ -23,7 +23,7 @@
 						<header>
 							<div class="inner">
 								<h2>Generative AI & Data Analysis: ChatGPT 4</h2>
-								<p>ChatGPT 4 includes access to an improved model and additional capabilities. Through the Data Analyst GPT you're able to run Python code directly in the web browser which greatly expands ChatGPt's data analysis capabilities.</p>
+								<p>ChatGPT 4 includes an enhanced model and additional capabilities. With the Data Analyst GPT, you can run Python code directly in your web browser, significantly expanding ChatGPT's data analysis potential.</p>
 
 								<img src = "images/GeneralImage.png" width="40%" class ="center" />
 						
@@ -38,14 +38,15 @@
 
 									<section>
 										<h2 class="major">ChatGPT 4: Data Analyst GPT</h2>
-										<p>Full access to ChatGPT 4 currently requires a paid membership for ChatGPT. It has additional capabilities such as being able to upload external files. <b>Due to security and privacy concerns only publicly available data should be uploaded.</b> ChatGPT 4 also includes access to additional specialized GPTs such as DALL-E and <a href="https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt#h_db6ee11c59">Data Analyst</a>. The Data Analyst GPT is capable of writing and running Python code in the browser, so you don’t have to copy code and run it locally. It can be used to help with all stages of your data analysis including:</p>
+										<p>Full access to ChatGPT 4 requires a paid membership. This version offers additional capabilities, such as the ability to upload external files. For security and privacy, only publicly available data should be uploaded. ChatGPT 4 also includes access to specialized GPTs like DALL-E and Data Analyst.</p>
+										<p style="margin-bottom: 10px;padding-bottom: 10px;">The Data Analyst GPT can write and run Python code directly in your browser, eliminating the need to run code locally. It can assist with all stages of data analysis, including:</p>	
 											<li>Data cleaning and preparation  </li>
 											<li>Data exploration including summary statistics and visualization  </li>
 											<li>Formal hypotheses testing and interpretation of results</li>
 			
 		
 										<p></p>
-										<p>Although this can all be very helpful, it is important to remember that <b>you must verify the results</b> . In this tutorial, we'll focus on how to use the Data Analyst GPT, including how to view the code produced by ChatGPT to verify its results. </p>
+										<p>While these features are very helpful, <b> it’s important to verify the results.</b> In this tutorial, we'll learn how to use the Data Analyst GPT, including how to view and verify the code produced by ChatGPT.</p>
 										<img src = "images/Overview.png" width="75%" class ="center"/>
 									</section>
 
@@ -53,163 +54,162 @@
 									
 										<h2 class="major" style="margin-top: 30px;padding-top: 30px;">Tutorial: Data Cleaning and Exploration </h2>
 														
-										<p style="margin-bottom: 10px;padding-bottom: 10px;">Scenario: You have been given a dataset on the <a href = "https://ourworldindata.org/grapher/yearly-number-of-objects-launched-into-outer-space">annual number of object launched into space </a> by different countries. You have been asked to do some exploratory data analysis and generate some initial plots. You have decided to use the Data Analyst GPT to help with this. </p>
+										<p style="margin-bottom: 10px;padding-bottom: 10px;"><b>Scenario:</b> We have been given a dataset on the  <a href = "https://ourworldindata.org/grapher/yearly-number-of-objects-launched-into-outer-space">annual number of object launched into space </a> by different countries. Our goal is to perform some exploratory data analysis and generate initial plots. We’ve decided to use the Data Analyst GPT for this task.</p>
 										
-										<p style="margin-bottom: 0px;padding-bottom: 0px;">First, we need to make sure that either GPT-4 or GPT-4o is selected. You can verify this by seeing which model is listed by the <a href="https://help.openai.com/en/articles/7864572-what-is-the-chatgpt-plus-model-selector">model selector</a> in your ChatGPT session. Then, to begin using the Data Analyst GPT, we must upload our data file. We can do this by dragging and dropping our file or by clicking the paper clip on the left side of the prompt box and then navigating to the file we want to upload. Recently, the ability to connect to <a href="https://help.openai.com/en/articles/9309188-connected-apps-on-chatgpt">cloud storage services</a> like Google Drive or OneDrive has also been added. However, due to <a href = https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance>privacy concerns</a>, we currently only recommend uploading publicly available data.
-
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">First, ensure that either GPT-4 or GPT-4-turbo is selected. You can verify this by checking the <a href="https://help.openai.com/en/articles/7864572-what-is-the-chatgpt-plus-model-selector">model selector</a> in your ChatGPT session. Then to start using the Data Analyst GPT, upload your data file by either dragging and dropping it into the chat or by clicking the paperclip icon on the left side of the prompt box and navigating to the file. Recently, the option to connect to <a href="https://help.openai.com/en/articles/9309188-connected-apps-on-chatgpt">cloud storage services</a> like Google Drive or OneDrive has been added. However, due to <a href = "https://help.openai.com/en/articles/5722486-how-your-data-is-used-to-improve-model-performance">privacy concerns</a>, we recommend only uploading publicly available data.</p>
 										<p></p>
 		
-										<img src = "images/DataUpload.png" width="100%" />
+										<img src = "images/GPT4/DataUpload.png" width="100%" />
 			
 
 
 										<p></p>
-										<p style="margin-bottom: 0px;padding-bottom: 0px;"">Once you have attached the file, you can either upload it without a text prompt or provide additional information. I like  to start by asking ChatGPT 4 to provide a summary of the dataset. ChatGPT 4 will use Python to read the file and provide some summary information. While the Python script is running, ChatGPT 4 will display, “analyzing”. </p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">Once you have attached the file, you can either upload it without a text prompt or provide additional information. We’ll start by asking ChatGPT 4 to provide a summary of the dataset. ChatGPT 4 will use Python to read the file and generate summary information. While the Python script is running, ChatGPT 4 will display "analyzing".</p>
 
 			
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Initial Upload </summary>
-											<img src = "images/InitialUpload.png" width="100%" />
+											<img src = "images/GPT4/InitialUpload.png" width="100%" />
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> ChatGPT 4 Response </summary>
-											<img src = "images/ChatGPT4_1.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_1.png" width="100%" />
 										</details>
 									
 										<p></p>
-										<p style="margin-bottom: 0px;padding-bottom: 0px;"">Before examining the response from GPT 4 in detail, let's look at how we can view the code it ran to generate its response. You will need to click the <b>View Analysis</b> link to open the code window with the Python script.  </p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">Before examining the response from GPT-4 in detail, let's see how we can view the code it ran to generate the response. Click the "View Analysis" link to open the code window with the Python script. </p>
 										<p></p>
 							
-										<img src = "images/ViewAnalysis.png" width="100%" />
+										<img src = "images/GPT4/ViewAnalysis.png" width="100%" />
 										<p></p>
 
-										<p style="margin-bottom: 0px;padding-bottom: 0px;">This will open the Analysis window with the Python script and its output. The first half of the Analysis window will contain the the Python script and the second half will contain the output of the code, allowing you to confirm any outputs for yourself. This could also help you learn new code as well!</p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">This will open the Analysis window, displaying the Python script and its output. The first half of the window contains the script, while the second half shows the output, allowing you to verify the results. This feature can also help you learn new coding techniques!</p>
 
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Code Block</summary>
-											<img src = "images/CodeBlock.png" width="100%" />
+											<img src = "images/GPT4/CodeBlock.png" width="100%" />
 										</details>
 
 
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Code Output</summary>
-											<img src = "images/CodeOutput.png" width="100%" />
+											<img src = "images/GPT4/CodeOutput.png" width="100%" />
 										</details>
 
 										<p></p>
 
-										<p>At the top of the Analysis window, there is an option to <b>Always show details</b> which will make the Python code display in the main ChatGPT session every time. Checking this option will help you to verify what the Data Analyst GPT is doing, so it is recommended. You can also specify this in your settings.</p>
+										<p>At the top of the Analysis window, there is an option to <b>Always show details</b>, which will display the Python code in the main ChatGPT session every time. Checking this option is recommended, as it helps you verify the results from the Data Analyst GPT. You can also specify this setting in your preferences.</p>
 
-										<img src = "images/CodeWindow.png" width="50%" class ="center"/>
+										<img src = "images/GPT4/CodeWindow.png" width="50%" class ="center"/>
 										<p></p>
-										<p>Now that we've selected <b>Always show details</b>, the Analysis window will automatically be incorporated into the main chat session. I started a new chat session, so that the rest of the tutorial will include the Analysis window by default.</p>
+										<p>Now that we've selected <b>Always show details</b>, the Analysis window will automatically be incorporated into the main chat session.</p>
 										
-										<p style="margin-bottom: 0px;padding-bottom: 0px;">In the response from ChatGPT, it mentions that the column names are not properly labeled and that there are some missing values as well. Instead of just accepting that ChatGPT understood the dataset correctly, let's ask follow up questions to confirm this. I will ask ChatGPT for additional details on why it thinks the data was labeled incorrectly and ask for a print out of the first five rows. </p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">In the response from ChatGPT, it mentions that the column names are not properly labeled and that there are some missing values. Instead of just accepting that ChatGPT understood the dataset correctly, let's ask follow-up questions to confirm this. Let’s ask ChatGPT for additional details on why it thinks the data was labeled incorrectly and request a printout of the first five rows.</p>
 
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary>Follow-up Question</summary>
-											<img src = "images/ChatGPT4_2.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_2.png" width="100%" />
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> ChatGPT 4 Response</summary>
-											<img src = "images/ChatGPT4_3.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_3.png" width="100%" />
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> ChatGPT4 Code</summary>
-											<img src = "images/ChatGPT4_4.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_4.png" width="100%" />
 										</details>
 
 
 										<p></p>
-										<p style="margin-bottom: 5px;padding-bottom: 5px;"> ChatGPT 4 interpreted the first three rows of the dataset as metadata. After reviewing the output for myself, I agree that the first few rows which include the download date and link are metadata and can be ignored when analyzing the data.</p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;"> ChatGPT 4 interpreted the first three rows of the dataset as metadata. After reviewing the output myself, I agree that these rows, which include the download date and link, are metadata and can be ignored when analyzing the data</p>
 									
-										<p style="margin-bottom: 0px;padding-bottom: 0px;""> Now let's ask ChatGPT to provide summary statistics on our dataset, so that we can gain a better understanding of it.</p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;""> Now, let's ask ChatGPT to provide summary statistics on our dataset to gain a better understanding of it.</p>
 									
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Summary Statistics</summary>
-											<img src = "images/ChatGPT4_5.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_5.png" width="100%" />
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> ChatGPT 4 Response</summary>
-											<img src = "images/ChatGPT4_6.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_6.png" width="100%" />
 										</details>
 										<p></p>
 
-										<p style="margin-bottom: 5px;padding-bottom: 5px;">These summary statistics can help us have a better general understanding of our dataset. We now know that the dataset spans 1957-2023 and that on average 29.4 objects were launched into space each year. It also provides more detailed information on the quantiles. </p>
-										<p style="margin-bottom: 0px;padding-bottom: 0px;">Another nice way to familiarize yourself with a dataset is to plot it. Let's ask ChatGPT 4 to create a line chart of the number of launches per country over time.</p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;">These summary statistics help us gain a general understanding of our dataset. We now know that the dataset spans from 1957 to 2023, with an average of 29.4 objects launched into space each year. It also provides detailed information on the quantiles. </p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">Another effective way to familiarize yourself with a dataset is by visualizing it. Let's ask ChatGPT 4 to create a line chart showing the number of launches per country over time.</p>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Requesting a Plot</summary>
-											<img src = "images/ChatGPT4_7.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_7.png" width="100%" />
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> ChatGPT 4 Response</summary>
-											<img src = "images/ChatGPT4_8.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_8.png" width="100%" />
 										</details>
 
 
-										<img src = "images/ChatGPT4_8plot.png" width="100%" />
+										<img src = "images/GPT4/ChatGPT4_8plot.png" width="70%" class ="center" />
 
 
 
 										<p></p>
-										<p style="margin-bottom: 5px;padding-bottom: 5px;"">ChatGPT 4 said the chart appears quite busy because of the number of countries displayed and I agree. Let's refine the plot to only include the top ten countries with the most objects launched into space.</p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;"">ChatGPT 4 mentioned that the chart appears quite busy due to the number of countries displayed, and I agree. Let's refine the plot to only include the top ten countries with the most objects launched into space.</p>
 									   
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Refining Plot</summary>
-											<img src = "images/ChatGPT4_9.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_9.png" width="100%" />
 										</details>
 
 							
 							
-										<img src = "images/ChatGPT4_10.png" width="100%" />
+										<img src = "images/GPT4/ChatGPT4_10.png" width="70%" class ="center" />
 				
 								
 
 										<p></p>
-										<p style="margin-bottom: 0px;padding-bottom: 0px;"">That leads to a much more manageable plot, but if we examine the top 10, we’ll see that the World and the European Space Agency are also being included with the individual countries. Let’s remove the European Space Agency but keep the World. We’ll highlight the World line to make it clear that it represents a total. I'll also ask for a label for just the World line. </p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">This refinement leads to a much more manageable plot. However, if we examine the top 10, we’ll see that the World and the European Space Agency are also being included with the individual countries. Let's remove the European Space Agency but keep the World. We'll highlight the World line to make it clear that it represents a total and add a label specifically for the World line.</p>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Refining plot</summary>
-											<img src = "images/ChatGPT4_11.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_11.png" width="100%" />
 										</details>
 
-										<img src = "images/ChatGPT4_12.png" width="100%" />
+										<img src = "images/GPT4/ChatGPT4_12.png" width="70%" class ="center"/>
 
 										<p></p>
 
-										<p style="margin-bottom: 0px;padding-bottom: 0px;"">We can confirm that the European Space Agency has been removed from the plot and that the Word line is black and dashed to help call attention to it. However, a label specific to the world line was not added. Remember that using LLMs often requires an iterative process with multiple refinement steps to get the best results. I will again ask for a label for the World line, but this time I will be more specific and tell ChatGPT 4 that the label should be within the plot area.</p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">We can confirm that the European Space Agency has been removed from the plot and that the World line is black and dashed to draw attention to it. However, a specific label for the World line was not added. Remember that using LLMs often requires an iterative process with multiple refinement steps to achieve the best results. We’ll ask for a label for the World line again, but this time I will be more specific and tell ChatGPT 4 that the label should be placed within the plot area.</p>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Refining plot</summary>
-											<img src = "images/ChatGPT4_13.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_13.png" width="100%" />
 										</details>
 
-										<img src = "images/ChatGPT4_14.png" width="100%" />
+										<img src = "images/GPT4/ChatGPT4_14.png" width="70%" class ="center" />
 
 
 										<p></p>
-										<p style="margin-bottom: 5px;padding-bottom: 5px;">The label was correctly added this time! Although there are some additional refinements we could make to this plot, this is not a bad starting place for learning more about our data. This exercise also made us think critically about how to hand non-country entities in our dataset.</p>
-										<p style="margin-bottom: 5px;padding-bottom: 5px;">As a final step, let's ask ChatGPT 4 to provide a download of the final Python script produced in this session. This way we can save the file and make our analysis more reproducible.</p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;">The label was correctly added this time! Although there are additional refinements we could make to this plot, this is a good starting point for learning more about our data. This exercise also made us think critically about handling non-country entities in our dataset.</p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;">As a final step, let's ask ChatGPT 4 to provide a download of the final Python script produced in this session. This way, we can save the file and make our analysis more reproducible.</p>
 
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Requesting Python Script</summary>
-											<img src = "images/ChatGPT4_15.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_15.png" width="100%" />
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary>ChatGPT 4 Response</summary>
-											<img src = "images/ChatGPT4_16.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_16.png" width="100%" />
 										</details>
 
 										<p></p>
@@ -218,49 +218,49 @@
 
 									<section>
 										<h2 class="major">Handling non-country entities in our dataset</h2>
-										<p>In this tutorial, we focussed on learning how to use the Data Analyst GPT for data exploration and visualization, so I did not focus on removing all of the non-country entities from the dataset. Instead, I chose to just remove the European Space Agency from the plot. However if we were conducting a full analysis on this data, we would need to decide on how to handle countries and these larger entities. Let's try to use ChatGPT to identify non-country entities in our dataset.  </p>
+										<p>In this tutorial, we focused on learning how to use the Data Analyst GPT for data exploration and visualization, so we did not focus on removing all of the non-country entities from the dataset. Instead, we  remove the European Space Agency from the plot. However, if we were conducting a full analysis on this data, we would need to decide how to handle countries and these larger entities. Let's try to use ChatGPT to identify non-country entities in our dataset. </p>
 				
-										<p style="margin-bottom: 5px;padding-bottom: 5px;">I'll start by pointing out that the World and European Space Agency are not individual countries to ChatGPT and ask if there are any other additional non-country entities.</p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;">We’ll start by pointing out to ChatGPT that the World and European Space Agency are not individual countries and ask if there are any other additional non-country entities.</p>
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Non-country Entities</summary>
-											<img src = "images/ChatGPT4_17.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_17.png" width="100%" />
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary>ChatGPT 4 Response</summary>
-											<img src = "images/ChatGPT4_18.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_18.png" width="100%" />
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary>ChatGPT 4 Code</summary>
-											<img src = "images/ChatGPT4_19.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_19.png" width="100%" />
 										</details>
 
 										<p></p>
 
-										<p style="margin-bottom: 5px;padding-bottom: 5px;">In the response from ChatGPT, it includes several other organizations such as APSCO and EUMETSAT, so at first glance it appears to have identified the non-country entities. However if we examine the code it used to find those organizations, we'll see that it started by generating its own list of "common non-country labels". Taking that into account, I'm not sure I can trust that ChatGPT found all of the non-country entities. To verify this, I will ask ChatGPT to provide a csv file of all the unique values in the Entity column, so that I can review them for myself.</p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;">In the response from ChatGPT, it included several other organizations such as APSCO and EUMETSAT, which appear to be non-country entities. However, if we examine the code it used to find these organizations, we'll see that it started by generating its own list of "common non-country labels." Considering this, it’s not clear if ChatGPT found all of the non-country entities. To verify this, we’ll ask ChatGPT to provide a CSV file of all the unique values in the Entity column so that we can review them ourselves.</p>
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary> Non-country Entities</summary>
-											<img src = "images/ChatGPT4_20.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_20.png" width="100%" />
 										</details>
 
 										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
 											<summary>ChatGPT 4 Response</summary>
-											<img src = "images/ChatGPT4_21.png" width="100%" />
+											<img src = "images/GPT4/ChatGPT4_21.png" width="100%" />
 										</details>
 
 										<p></p>
-										<p>In the list of unique entities, there are several other organizations like the European Union, NATO, and RASCOM that were missed by ChatGPT. <b>It's important to remember that not all tasks should be delegated to ChatGPT, particularly if it is a decision making task</b>.</p> 
-										<p>To solve the problem of having both countries and organization in our dataset, we could use ChatGPT to provide a list of unique values that we classify ourselves. Then we could tell ChatGPT which ones to remove. We could also be more specific with out request to ChatGPT and tell it to first generate a list of all countries in the world and then remove entities that were not on that list. Of course, we would still want to verify the results. </p>
+										<p>In the list of unique entities, there are several other organizations like the European Union, NATO, and RASCOM that were missed by ChatGPT. <b>It's important to remember that not all tasks should be delegated to ChatGPT, especially decision-making tasks.</b> </p> 
+										<p>To solve the problem of having both countries and organizations in our dataset, we could use ChatGPT to provide a list of unique values that we classify ourselves. Then we could tell ChatGPT which ones to remove. Alternatively, we could be more specific with our request to ChatGPT by asking it to first generate a list of all countries in the world and then remove entities that are not on that list. Of course, we would still want to verify the results.</p>
 
 
 									</section>
 
 
 
-									<section>
+									<section >
 										<h2 class="major">Key takeaways</h2>
-										<p>ChatGPT and other GenAI models can be helpful in your data analysis, but there are certain things you must remember when using it:</p>
+										<p style="margin-bottom: 5px;padding-bottom: 5px;">ChatGPT and other GenAI models can be helpful in your data analysis, but there are certain things you must remember when using it:</p>
 											<li>Only upload publicly available data</li>
 											<li>Not all tasks should be delegated to ChatGPT</li>
 											<li>Never accept results without verifying them</li>

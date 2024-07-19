@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Elements - Solid State by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+						<header>
+							<div class="inner">
+								<h2>Generative AI & Data Analysis: Statistics</h2>
+								<p>ChatGPT 4 includes access to an improved model and additional capabilities, including running Python code in the web browser. Because of this, you're able to perform statistical analyses.</p>
+
+								<img src = "images/GeneralImage.png" width="40%" class ="center" />
+						
+							</div>
+						</header>
+
+						<!-- Content -->
+							<div class="wrapper">
+								<div class="inner">
+
+
+
+									<section>
+										<h2 class="major">ChatGPT 4: Data Analyst GPT</h2>
+										<p style="margin-bottom: 10px;padding-bottom: 10px;">Full access to ChatGPT 4 currently requires a paid membership for ChatGPT. It has additional capabilities such as being able to upload external files. <b>Due to security and privacy concerns only publicly available data should be uploaded.</b> ChatGPT 4 also includes access to additional specialized GPTs such as DALL-E and <a href="https://help.openai.com/en/articles/8437071-data-analysis-with-chatgpt#h_db6ee11c59">Data Analyst</a>. The Data Analyst GPT is capable of writing and running Python code in the browser, so you don’t have to copy code and run it locally. It can be used to help with all stages of your data analysis including:</p>
+											<li>Data cleaning and preparation  </li>
+											<li>Data exploration including summary statistics and visualization  </li>
+											<li><b>Formal hypotheses testing and interpretation of results</b></li>
+			
+		
+										<p></p>
+										<p>Although this can all be very helpful, it is important to remember that you must verify the results . In this tutorial, we'll focus on how to use the Data Analyst GPT for formal hypothesis testing </p>
+										<img src = "images/Overview.png" width="75%" class ="center"/>
+									</section>
+
+									<section>
+									
+										<h2 class="major" style="margin-top: 30px;padding-top: 30px;">Tutorial: Statistical Analysis </h2>
+														
+										<p style="margin-bottom: 10px;padding-bottom: 10px;"><b>Scenario:</b> We have been given a dataset on  <a href = "https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/PlantGrowth">crop yields</a> under various conditions, and our goal is to determine if there are significant differences in crop yield between these conditions.  </p>
+										
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">Before diving into data analysis, it's crucial to start by viewing and summarizing the dataset. This helps ensure that the data has been imported correctly and that there are no unexpected issues. We'll use ChatGPT-4 to provide a summary of our plant dataset.</p>
+										
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Initial Upload </summary>
+											<img src = "images/Stats/Statistics_1.png" width="100%" />
+										</details>
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGPT 4 Response </summary>
+											<img src = "images/Stats/Statistics_2.png" width="100%" />
+										</details>
+										
+			
+										<p></p>
+
+										<p>From this, we know that the dataset has two columns: "weight" and "group," with thirty observations in total. This dataset represents an experiment focused on how different treatments affect crop yield which is measured by dry weight.</p>
+										<img src = "images/Stats/DALL·E_crop.png" width="75%" class ="center" />
+										<p></p>
+
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">While we could create a visualization like in the previous tutorial, let's dive into a more formal statistical analysis this time. If we're unsure about the best statistical test for this dataset, we can ask ChatGPT-4 for suggestions. <b> To get the most useful advice, we should be specific about our objective.</b> Instead of asking for general options on how to analyze the dataset, we'll start our prompt by stating our goal: to compare the weights between the three groups.</p>
+
+			
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Statical analysis options </summary>
+											<img src = "images/Stats/Statistics_3.png" width="100%" />
+										</details>
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGPT 4 Response </summary>
+											<img src = "images/Stats/Statistics_4.png" width="100%" />
+										</details>
+									
+										<p></p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"">ChatGPT-4 suggests using an ANOVA for our question. If you’re not familiar with ANOVA, you should ask follow-up questions to understand why this test was recommended. Additionally, you can inquire about other potential statistical tests to consider. For now, we'll proceed with the ANOVA suggestion. ChatGPT-4 also provides the assumptions for conducting an ANOVA and asks whether we'd like to proceed with the test or check the assumptions first. It's always important to check the assumptions of a statistical test, so we'll request that ChatGPT-4 verifies these assumptions for us.</p>
+								
+										
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Checking assumptions</summary>
+											<img src = "images/Stats/Statistics_5.png" width="100%" />
+										</details>
+
+
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGPT 4 Response</summary>
+											<img src = "images/Stats/Statistics_6.png" width="100%" />
+										</details>
+
+										<p></p>
+
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">Based on these results, ChatGPT-4 confirms that the assumptions of an ANOVA are met. By default, ChatGPT uses formal hypothesis tests like the Shapiro-Wilk test to check these assumptions. Sometimes, these tests can be too conservative, so we could also use visual checks like QQ plots. For now, I am satisfied with these results and we will proceed with the ANOVA and post-hoc testing.
+
+										</p>
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ANOVA</summary>
+											<img src = "images/Stats/Statistics_7.png" width="100%" />
+										</details>
+
+
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGPT 4 Response</summary>
+											<img src = "images/Stats/Statistics_8.png" width="100%" />
+										</details>
+
+
+										<p></p>
+										<p>Based on these results, we found a statistically significant difference between the two treatment groups. However neither of the treatment groups had a statistically significant difference with the control group.</p>
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">Once you have results, you often need to summarize them in formal language. ChatGPT can help with this task as well. Let's ask for the results to be written in language suitable for a journal article. We’ll also specify that it should include a discussion of the assumptions.</p>
+										
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> Formal summary</summary>
+											<img src = "images/Stats/Statistics_9.png" width="100%" />
+										</details>
+
+
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGPT 4 Response</summary>
+											<img src = "images/Stats/Statistics_10.png" width="100%" />
+										</details>
+
+										<p></p>
+
+										<p style="margin-bottom: 0px;padding-bottom: 0px;">This is a nice summary of the results we obtained with ChatGPT-4, but how confident are we in them? I mentioned a few places above where I could have asked ChatGPT-4 follow-up questions but did not. To ensure we made the best decisions, let's ask ChatGPT-4 to review our results from the perspective of a manuscript reviewer. To do this, I will first open a new chat session with ChatGPT-4 and provide our results. <b>I'm opening a new session to ensure our previous context does not bias the interpretation of the results.</b></p>
+
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary>Review results</summary>
+											<img src = "images/Stats/Statistics_11.png" width="100%" />
+										</details>
+
+										<details style = " color: #F84C1E; font-size: 1.15em;border-radius: 25px;" >
+											<summary> ChatGPT 4 Response</summary>
+											<img src = "images/Stats/Statistics_12.png" width="100%" />
+										</details>
+
+									
+
+
+										<p></p>
+										<p >Overall, the comments from ChatGPT-4 are positive. It suggests that we think more deeply about why only Treatment 1 and Treatment 2 are significantly different, which is something we would want to discuss in a full manuscript. </p>
+									
+										<p style="margin-bottom: 0px;padding-bottom: 0px;"> If you're unsure about any suggestions made by ChatGPT-4, you can ask for additional clarification. Ultimately, it is your decision whether to implement these suggestions or not. This is just another way to use ChatGPT-4 to help improve your data analysis. Once you're satisfied with your analysis, you can also ask ChatGPT-4 for a download of the script you made during the session. Having a local copy of any final analysis is important so that others can replicate what you did.</p>
+									
+
+										<p/>
+										
+
+									</section>
+
+									<section>
+										<h2 class="major">Key takeaways</h2>
+										<p style="margin-bottom: 10px;padding-bottom: 10px;">ChatGPT and other GenAI models can be helpful in your data analysis, but there are certain things you must remember when using it:</p>
+											<li>Only upload publicly available data</li>
+											<li>Not all tasks should be delegated to ChatGPT</li>
+											<li>Never accept results without verifying them</li>
+											<li>This is an iterative process and you will most likely have to refine results</li>
+									</section>
+
+
+
+								
+								</div>
+							</div>
+
+					</section>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Get in touch</h2>
+							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-home">
+									Untitled Inc<br />
+									1234 Somewhere Road Suite #2894<br />
+									Nashville, TN 00000-0000
+								</li>
+								<li class="icon solid fa-phone">(000) 000-0000</li>
+								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
+								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
