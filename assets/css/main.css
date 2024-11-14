@@ -16,7 +16,7 @@ u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
+footer, header, hgroup, menu, /*nav,*/ output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -25,8 +25,36 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;}
 
+/* Styling for Centered Links */
+.centered-links {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.centered-links a {
+  color: #F08400; /* UVA Orange */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px; /* Spacing between links */
+  font-size: 1.2em;
+  padding: 5px 10px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.centered-links a:hover {
+  color: #0D3268; /* Change to UVA Dark Blue on hover */
+  background-color: #F08400; /* Light gray background on hover */
+  padding: 8px 16px; /* Increase padding on hover for standout effect */
+  border-radius: 4px; /* Rounded corners on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+--primary-color: #0D3268;  /* UVA Dark Blue */
+--accent-color: #F08400;   /* UVA Orange */
+--neutral-background: #f5f5f5;  /* Light gray */
+
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, /*nav,*/section {
 	display: block;}
 
 body {
@@ -99,8 +127,8 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg_uva.jpg");
+		background-color: #FFFFFF;
+		/*background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg_uva.jpg");*/
 		background-size: auto,
  cover;
 		background-attachment: fixed,
@@ -2320,7 +2348,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #4c5c96;
+			border-color: #3f4e85;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2745,7 +2773,7 @@ input, select, textarea {
 				}
 
 				ul.pagination li > .page.active {
-					background-color: #4c5c96;
+					background-color: #3f4e85;
 				}
 
 			ul.pagination li:first-child {
@@ -2867,11 +2895,11 @@ input, select, textarea {
 		border-radius: 5px;
 		border: 0;
 		box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
-		color: #ffffff !important;
+		color: #F08400; 
 		cursor: pointer;
 		display: inline-block;
 		font-family: Raleway, Helvetica, sans-serif;
-		font-size: 0.8em;
+		font-size: 1.em;
 		font-weight: 700;
 		height: 3.75em;
 		letter-spacing: 0.1em;
@@ -2913,7 +2941,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #4c5c96;
+			background-color: #3f4e85;
 			box-shadow: none;
 		}
 
@@ -3070,7 +3098,16 @@ input, select, textarea {
 		}
 
 /* Header */
-
+  #header a{
+     color: #F08400; /* UVA Orange */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px; /* Spacing between links */
+    font-size: 1.2em;
+    padding: 5px 10px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect*/
+  }
+  
 	#header {
 		-moz-transition: background-color 0.2s ease-in-out;
 		-webkit-transition: background-color 0.2s ease-in-out;
@@ -3281,7 +3318,7 @@ input, select, textarea {
 			-ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
 			transition: opacity 0.35s ease, transform 0.35s ease;
 			-webkit-overflow-scrolling: touch;
-			background: #4c5c96;
+			background: #3f4e85;
 			border-radius: 5px;
 			display: block;
 			max-width: 100%;
@@ -3378,6 +3415,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
+	  background-attachment: fixed;
 		padding: 10em 0 4.75em 0 ;
 	}
 
@@ -3461,17 +3499,18 @@ input, select, textarea {
 			text-transform: uppercase;
 		}
 
-		@media screen and (max-width: 1280px) {
+		@media screen and (max-width: 5000px) {
 
 			#banner {
 				padding: 7em 0 8.25em 0 ;
-				background-color: #2e3141;
+				background-color: #2e3141;				
 				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg_uva.jpg");
+				background-attachment: fixed;
 				background-size: auto,
  cover;
 				background-position: center,
  center;
-				margin-bottom: -6.5em;
+				margin-bottom: -10.5em;
 			}
 
 		}
@@ -3577,7 +3616,7 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 9em 0 6.25em 0 ;
-			background-color: #2e3141;
+			background-color: #FFFFFF;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg_uva.jpg");
 			background-size: auto,
  cover;
@@ -3631,15 +3670,16 @@ input, select, textarea {
 	}
 
 		.wrapper:before, .wrapper:after {
-			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232e3141%3B' /%3E%3C/svg%3E");
+		/*	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%232e3141%3B' /%3E%3C/svg%3E");
+		*/
 		}
 
 		.wrapper:before {
-			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
+			box-shadow: inset 0 -1px 0 0 #FFFFFF, 0 1px 0 0 #FFFFFF;
 		}
 
 		.wrapper:after {
-			box-shadow: inset 0 -1px 0 0 #2e3141, 0 1px 0 0 #2e3141;
+			box-shadow: inset 0 -1px 0 0 #FFFFFF, 0 1px 0 0 #FFFFFF;
 		}
 
 		.wrapper:before, .wrapper:after {
@@ -3687,35 +3727,38 @@ input, select, textarea {
 		}
 
 		.wrapper.style2 {
-			background-color: #353849;
+			background-color: #481935;
 		}
 
-			.wrapper.style2:before, .wrapper.style2:after {
+/*			.wrapper.style2:before, .wrapper.style2:after {
 				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23353849%3B' /%3E%3C/svg%3E");
-			}
+			}*/
 
 			.wrapper.style2:before {
-				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
+				box-shadow: inset 0 -1px 0 0 #481935, 0 1px 0 0 #481935;
 			}
 
 			.wrapper.style2:after {
-				box-shadow: inset 0 -1px 0 0 #353849, 0 1px 0 0 #353849;
+				box-shadow: inset 0 -1px 0 0 #481935, 0 1px 0 0 #481935;
 			}
 
 		.wrapper.style3 {
 			background-color: #3d4051;
+			color: #black !important;
 		}
 
 			.wrapper.style3:before, .wrapper.style3:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233d4051%3B' /%3E%3C/svg%3E");
+				/*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233d4051%3B' /%3E%3C/svg%3E");*/
 			}
 
 			.wrapper.style3:before {
 				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
+				color: #black !important;
 			}
 
 			.wrapper.style3:after {
 				box-shadow: inset 0 -1px 0 0 #3d4051, 0 1px 0 0 #3d4051;
+				color: #black !important;
 			}
 
 		.wrapper.style4 {
@@ -3767,19 +3810,22 @@ input, select, textarea {
 			}
 
 		.wrapper.spotlight {
-			background-color: #4c5c96;
+			background-color: #FFFFFF;
+			color: #black !important;
 		}
-
+/*
 			.wrapper.spotlight:before, .wrapper.spotlight:after {
-				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%234c5c96%3B' /%3E%3C/svg%3E");
-			}
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233f4e85%3B' /%3E%3C/svg%3E");
+			}*/
 
 			.wrapper.spotlight:before {
-				box-shadow: inset 0 -1px 0 0 #4c5c96, 0 1px 0 0 #4c5c96;
+				box-shadow: inset 0 -1px 0 0 #FFFFFF, 0 1px 0 0 #FFFFFF;
+				color: #black !important;
 			}
 
 			.wrapper.spotlight:after {
-				box-shadow: inset 0 -1px 0 0 #4c5c96, 0 1px 0 0 #4c5c96;
+				box-shadow: inset 0 -1px 0 0 #FFFFFF, 0 1px 0 0 #FFFFFF;
+				color: #black !important;
 			}
 
 			.wrapper.spotlight .inner {
@@ -3828,71 +3874,75 @@ input, select, textarea {
 			}
 
 			.wrapper.spotlight.style2 {
-				background-color: #45558d;
+				background-color: #4C5C96;
 			}
 
-				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
+/*				.wrapper.spotlight.style2:before, .wrapper.spotlight.style2:after {
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2345558d%3B' /%3E%3C/svg%3E");
 				}
+				*/
 
 				.wrapper.spotlight.style2:before {
-					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
+					box-shadow: inset 0 -1px 0 0 #4C5C96, 0 1px 0 0 #4C5C96;
 				}
 
 				.wrapper.spotlight.style2:after {
-					box-shadow: inset 0 -1px 0 0 #45558d, 0 1px 0 0 #45558d;
+					box-shadow: inset 0 -1px 0 0 #4C5C96, 0 1px 0 0 #4C5C96;
 				}
 
 			.wrapper.spotlight.style3 {
-				background-color: #3f4e85;
+				background-color: #FFFFFF;
+				color: #black !important;
 			}
-
+/*
 				.wrapper.spotlight.style3:before, .wrapper.spotlight.style3:after {
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233f4e85%3B' /%3E%3C/svg%3E");
 				}
-
+*/
 				.wrapper.spotlight.style3:before {
-					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
+					box-shadow: inset 0 -1px 0 0 #FFFFFF, 0 1px 0 0 #FFFFFF;
+					color: #black !important;
 				}
 
 				.wrapper.spotlight.style3:after {
-					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
+					box-shadow: inset 0 -1px 0 0 #FFFFFF, 0 1px 0 0 #FFFFFF;
+					color: #black !important;
 				}
 
 			.wrapper.spotlight.style4 {
-				background-color: #39477c;
+				background-color: #3f4e85;
 			}
-
+/*
 				.wrapper.spotlight.style4:before, .wrapper.spotlight.style4:after {
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%2339477c%3B' /%3E%3C/svg%3E");
 				}
-
+*/
 				.wrapper.spotlight.style4:before {
-					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
+					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
 				}
 
 				.wrapper.spotlight.style4:after {
-					box-shadow: inset 0 -1px 0 0 #39477c, 0 1px 0 0 #39477c;
+					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
 				}
 
 			.wrapper.spotlight.style5 {
-				background-color: #324072;
+				background-color: #3f4e85;
 			}
-
+/*
 				.wrapper.spotlight.style5:before, .wrapper.spotlight.style5:after {
 					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23324072%3B' /%3E%3C/svg%3E");
 				}
-
+*/
 				.wrapper.spotlight.style5:before {
-					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
+					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
 				}
 
 				.wrapper.spotlight.style5:after {
-					box-shadow: inset 0 -1px 0 0 #324072, 0 1px 0 0 #324072;
+					box-shadow: inset 0 -1px 0 0 #3f4e85, 0 1px 0 0 #3f4e85;
 				}
 
 			.wrapper.spotlight.style6 {
-				background-color: #2d3a69;
+				background-color: #3f4e85;
 			}
 
 				.wrapper.spotlight.style6:before, .wrapper.spotlight.style6:after {
@@ -4154,30 +4204,113 @@ input, select, textarea {
 		}
 
 	}
+	
 
-	details {
-		transition: 0.2s background linear;
-	  }
-	  
-	  details:hover {
-		background: rgba(107, 106, 106, 0.377);
-	  }
+/* Banner menu styling */
+.banner-menu {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  /*bottom: 20px; /* Adjust this as needed */
+  width: 100%;
+  text-align: center;
+  z-index: 10; /* Ensures menu is above other elements */
+}
 
-	.center {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
+.menu-item {
+  position: relative;
+  color: #fff;
+}
 
-	figure {
-		display: inline-block;
-		
-		margin: 20px; /* adjust as needed */
-	}
-	figure img {
-		vertical-align: top;
-	}
-	figure figcaption {
-		
-		text-align: center;
-	}
+.menu-item span {
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-item span:hover {
+  color: #F08400; /* Hover color */
+}
+
+/* Dropdown menu styling */
+/* Container for centering the dropdowns */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #2e3141; /* Darker UVA color for navbar */
+    max-width: 1200px; /* Adjust this as necessary */
+    margin: 0 auto; /* Center-aligns navbar within the max-width */
+}
+
+        /* Styling for dropdown items */
+  .dropdown {
+    display: inline-flex;
+    flex-wrap: wrap;
+    position: relative;
+    color: #F08400;
+    margin: 0 10px;
+}
+@media screen and (min-width: 1200px) {
+    .navbar {
+        max-width: 1200px;
+    }
+}
+        .dropdown-content {
+          font-size: 14px;
+            display: none;
+            position: absolute;
+            background-color: #E57200; /* UVA orange */
+            width: 100%;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Hover effect for dropdown items */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover {
+          font-size: 14px;
+            background-color: #2e3141; /* Lighten or change color to make it stand out */
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Optional shadow */
+        }
+      .dropdown a {
+            color: white;
+            font-size: 14px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+.dropdown-content {
+    font-size: 14px; /* Keeps the font size proportional to the root font size */
+    /* other styling */
+    font: inherit;
+}
+	/* Styling for Centered Links */
+.centered-links {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.centered-links a {
+  color: #F08400; /* UVA Orange */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px; /* Spacing between links */
+  font-size: 1.2em;
+  padding: 5px 10px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.centered-links a:hover {
+  color: #0D3268; /* Change to UVA Dark Blue on hover */
+  background-color: #F08400; /* Light gray background on hover */
+  padding: 8px 16px; /* Increase padding on hover for standout effect */
+  border-radius: 4px; /* Rounded corners on hover */
+  text-decoration: underline; /* Underline on hover */
+}
