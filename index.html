@@ -52,8 +52,16 @@
     .then(res => res.text())
     .then(data => {
       document.getElementById('navbar').innerHTML = data;
+
+      // Add hamburger toggle logic after nav loads
+      const toggle = document.getElementById("hamburger-toggle");
+      const navbar = document.getElementById("main-navbar");
+
+      toggle.addEventListener("click", () => {
+        navbar.classList.toggle("open");
+      });
     });
-</script>			
+</script>		
       </div>
 					</section>
 
