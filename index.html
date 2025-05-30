@@ -21,7 +21,9 @@
 				
 					<header id="header" class="alt">
 					  <a href="index.html"> Home </a>
+					  
 						<nav>
+						  <a href="#askus">Ask us</a>
 							<a href="#menu">Menu</a>
 						</nav>
 					</header>
@@ -43,38 +45,15 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>UVA HSL Innovation Portal</h2>
-			  <div class="navbar">
-        <!-- Dropdown 1 -->
-        <div class="dropdown">
-            <button class="dropbtn">Learn</button>
-            <div class="dropdown-content">
-                <a href="#"><strong>Learn</strong></a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-        
-        <!-- Dropdown 2 -->
-        <div class="dropdown">
-            <button class="dropbtn">Connect</button>
-            <div class="dropdown-content">
-                <a href="#"><strong>Connect</strong></a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-        
-        <!-- Dropdown 3 -->
-        <div class="dropdown">
-            <button class="dropbtn">Inform</button>
-            <div class="dropdown-content">
-                <a href="#"><strong>Inform</strong></a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-    </div>			
+							<h2 align = "center">UVA HSL Innovation Portal</h2>
+			  <div id="navbar"></div>
+<script>
+  fetch('nav.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+</script>			
       </div>
 					</section>
 
@@ -86,7 +65,7 @@
 
 								<div class="inner">
 									<a href="#" class="image"><img src="images/Innovation.png" alt="" /></a>
-									<div class="content">								<h2 class="major"><font color="F08400">	About Innovation @ HSL</h2></font>
+									<div class="content"><h2 class="major"><font color="F08400">	About Innovation @ HSL</h2></font>
 										<strong><font color=black><p>Innovation @ HSL is a hub offering a wealth of resources and support to help researchers transform their innovative ideas into tangible realities.</p></font></strong>
 										<a href="https://guides.hsl.virginia.edu/consultation-request" class="special"><font color="F08400">	Ask us for help</a></font>
 									</div>
@@ -159,7 +138,8 @@
 								<li class="icon solid fa-phone">(434) 924-5444</li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; 
+								Design adapted from the <a href="https://html5up.net/solid-state">Solid State</a> template by <a href="http://html5up.net">HTML5 UP</a>, used under <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>.</li>
 							</ul>
 						</div>
 					</section>
