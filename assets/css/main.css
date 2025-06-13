@@ -4375,3 +4375,40 @@ html {
     padding: 10px;
   }
 }
+.header-nav {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-logo {
+  height: 32px; /* Adjust as needed */
+  margin-right: 12px;
+}
+
+
+.dual-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 2px;
+  margin-right: 20px; /* Optional: spacing from nav links */
+  height: 100%; /* Let it scale within header height */
+}
+
+.dual-logo-wrapper .logo {
+  height: 2.8vw;  /* Responsive */
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-separator {
+  display: inline-block;
+  width: 2px;
+  height: 25px; /* Taller separator */
+  background-color: #E57200; /* UVA Orange */
+  margin: 0 5px;
+  margin-top: 1.5vw;
+  align-self: stretch; /* Stretches the separator vertically */
+}
