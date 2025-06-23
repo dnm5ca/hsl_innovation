@@ -4339,7 +4339,7 @@ html {
 }*/
 
 /* Responsive Navbar */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 736px) {
   .navbar {
     display: none;
     flex-direction: column;
@@ -4376,6 +4376,7 @@ html {
     padding: 10px;
   }
 }
+
 .header-nav {
   display: flex;
   align-items: center;
@@ -4423,75 +4424,138 @@ html {
   margin-top: 0;
 }
 
-@media screen and (max-width: 768px) {
+.site-title{display: none;}
+    #portal-title {
+      display: none;    }
+@media screen and (max-width: 736px) {
   /* Make header content stack vertically and center it */
-  #header,
-  .site-header,
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
+  #header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start; !important;
+    width: 100%; !important;
+    
   }
 
-  /* Stack logos vertically, with spacing */
   .dual-logo-wrapper {
-   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: nowrap;
+    display: flex; !important;
+    flex-direction: row; !important;
+    gap: 0.5rem; !important;
   }
 
-  /* Shrink both logos */
-  .dual-logo-wrapper img,
-  .logo,
-  header img {
-    max-height: 16px;
-    height: auto;
-    width: auto;
-  }
+    .dual-logo-wrapper img {
+      max-height: 30px; !important;
+      height: auto; !important;
+      width: auto; !important;
+    }
 
   /* Optionally shrink just the longer UVA Health logo more */
   .dual-logo-wrapper img:first-child {
-    max-height: 14px;
+    max-height: 20px; !important;
   }
 
   .dual-logo-wrapper img:last-child {
-    max-height: 26px;
+    max-height: 26px; !important;
   }
 
   /* Stack nav links vertically, space them out */
   nav,
   .navbar,
   .nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: flex-end;
+  display: flex; !important;
+  flex-wrap: wrap; !important;
+  gap: 1rem; !important;
+  justify-content: flex-end; !important;
   }
 
   nav a,
   .navbar a,
   .nav a {
-    display: inline-block;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: bold;
+    display: inline-block; !important;
+    font-size: 1rem; !important;
+    padding: 0.5rem 1rem; !important;
+    color: #FFFFFF; !important;
+    text-decoration: none; !important;
+    font-weight: bold; !important;
   }
 
   nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; !important;
   }
 
   /* Optional: adjust header text */
   .site-title,
   .header-text {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+    font-size: 1.2rem; !important;
+    margin-top: 0.5rem; !important;
   }
-    .logo-separator {
-    display: none;
+  .logo-separator {
+    display: none; !important;
   }
+  
+   #nav-links {
+    flex-direction: column; !important;
+    position: left; !important;
+    width: 100%; !important;
+    margin-top: 1rem; !important;
+  }
+
+  #nav-links:target {
+    display: flex; !important;
+  }
+
+  #nav-links a {
+    color: #F08400; !important;
+    font-weight: bold; !important;
+    text-decoration: none; !important;
+  }
+
+    .site-title {
+      font-size: 1.25rem; !important;
+      font-weight: bold; !important;
+      color: white; !important;
+      margin-top: 0.5rem; !important;
+    }
+
+#header {
+  padding-top: 1rem;
+  gap: 2rem;
+      padding-bottom: 2rem; /* add space before banner starts */
+    z-index: 2; /* ensure header is on top */
+    background-color: #2C2F43; /* match your header background */
 }
+
+    #portal-title {
+    display: block;
+    background-color: #2C2F43;
+    color: white;
+    text-align: left;
+    padding: 2rem 1.5rem 1.5rem;
+    margin-bottom: 2rem;
+    position: ;
+    z-index: 2;
+  }
+
+  #portal-title h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  #portal-title .highlight {
+    color: #F08400;
+  }
+  #banner {
+    margin-top: 0;
+    padding-top: 20rem;
+    position: left;
+    z-index: 1;
+  }
+  
+  
+  #banner h2 {
+  text-align: left;
+}
+}
+
