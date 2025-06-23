@@ -129,7 +129,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #FFFFFF;
+		background-color: none;
 		/*background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg_uva.jpg");*/
 		background-size: auto,
  cover;
@@ -155,7 +155,7 @@ input, select, textarea {
 	body, input, select, textarea {
 		color: #ffffff;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 16.5pt;
+		font-size: 1.125em;
 		font-weight: 300;
 		line-height: 1.65;
 	}
@@ -3668,7 +3668,7 @@ input, select, textarea {
 
 	.wrapper {
 		background-color: #2e3141;
-		margin: 6.5em 0;
+		/*margin: 6.5em 0;*/
 		position: relative;
 	}
 
@@ -3749,6 +3749,7 @@ input, select, textarea {
 			background-color: #3d4051;
 			color: #black !important;
 		}
+
 
 			.wrapper.style3:before, .wrapper.style3:after {
 				/*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%233d4051%3B' /%3E%3C/svg%3E");*/
@@ -3894,7 +3895,7 @@ input, select, textarea {
 				}
 
 			.wrapper.spotlight.style3 {
-				background-color: #FFFFFF;
+				background-color: #FFF6C8;
 				color: #black !important;
 			}
 /*
@@ -3903,12 +3904,12 @@ input, select, textarea {
 				}
 */
 				.wrapper.spotlight.style3:before {
-					box-shadow: inset 0 -1px 0 0 #FFFFFF, 0 1px 0 0 #FFFFFF;
+					box-shadow: inset 0 -1px 0 0 #FFF6C8, 0 1px 0 0 #FFF6C8;
 					color: #black !important;
 				}
 
 				.wrapper.spotlight.style3:after {
-					box-shadow: inset 0 -1px 0 0 #FFFFFF, 0 1px 0 0 #FFFFFF;
+					box-shadow: inset 0 -1px 0 0 #FFF6C8, 0 1px 0 0 #FFF6C8;
 					color: #black !important;
 				}
 
@@ -4323,7 +4324,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hamburger Button */
+/* Hamburger Button 
 #hamburger-toggle {
   display: none;
   background: none;
@@ -4335,7 +4336,7 @@ html {
   right: 1em;
   z-index: 10001;
   cursor: pointer;
-}
+}*/
 
 /* Responsive Navbar */
 @media screen and (max-width: 768px) {
@@ -4388,6 +4389,7 @@ html {
 
 
 .dual-logo-wrapper {
+
   display: flex;
   align-items: center;
   justify-content: left;
@@ -4411,4 +4413,85 @@ html {
   margin: 0 5px;
   margin-top: 1.5vw;
   align-self: stretch; /* Stretches the separator vertically */
+}
+.wrapper:first-of-type {
+  margin-top: 6.5rem;  /* or match your header height + buffer */
+}
+
+/* Remove top margin between consecutive wrappers */
+.wrapper + .wrapper {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  /* Make header content stack vertically and center it */
+  #header,
+  .site-header,
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  /* Stack logos vertically, with spacing */
+  .dual-logo-wrapper {
+   display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+  }
+
+  /* Shrink both logos */
+  .dual-logo-wrapper img,
+  .logo,
+  header img {
+    max-height: 16px;
+    height: auto;
+    width: auto;
+  }
+
+  /* Optionally shrink just the longer UVA Health logo more */
+  .dual-logo-wrapper img:first-child {
+    max-height: 14px;
+  }
+
+  .dual-logo-wrapper img:last-child {
+    max-height: 26px;
+  }
+
+  /* Stack nav links vertically, space them out */
+  nav,
+  .navbar,
+  .nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-end;
+  }
+
+  nav a,
+  .navbar a,
+  .nav a {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Optional: adjust header text */
+  .site-title,
+  .header-text {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+    .logo-separator {
+    display: none;
+  }
 }
