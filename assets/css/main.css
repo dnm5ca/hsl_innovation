@@ -3696,8 +3696,8 @@ input, select, textarea {
 		}
 
 		.wrapper:before {
-			left: 0;
-			top: -6.5em;
+		/*	left: 0;
+			top: -6.5em;*/
 		}
 
 		.wrapper:after {
@@ -4444,9 +4444,9 @@ html {
   /* Make header content stack vertically and center it */
 
 
- #header {
-
-  }
+   #header {
+  
+    }
 
   .dual-logo-wrapper {
     display: flex !important;
@@ -4492,64 +4492,52 @@ html {
     font-size: 1.2rem; !important;
     margin-top: 0.5rem; !important;
   }
-  .logo-separator {
-    display: none; !important;
-  }
   
-    #nav-links {
+  #nav-links {
     display: flex !important;
     flex-direction: row !important;
     font-size: 0.85rem !important;
     border: none;
     z-index: 100;
-  align-items: center;
-  gap: 0rem;  /* reduce spacing between links */
-  padding: 0;
-  margin: 0;
+    align-items: center;
+    gap: 0rem;  /* reduce spacing between links */
+    padding: 0;
+    margin: 0;
   }
 
   #nav-links a {
-      color: #F08400;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 0.85rem;
-  margin: 0;           /* remove default margins */
-  padding: 0 4px;      /* very tight horizontal padding */
-  line-height: 1;      /* compact vertical spacing */
-  
-  
+    color: #F08400;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0;           /* remove default margins */
+    padding: 0 4px;      /* very tight horizontal padding */
+    line-height: 1;      /* compact vertical spacing */
   }
 
-    .site-title {
-      font-size: 1.25rem; !important;
-      font-weight: bold; !important;
-      color: white; !important;
-      margin-top: 0.5rem; !important;
-    }
+  #header {
+    padding-top: 1rem;
+    gap: 2rem;
+        padding-bottom: 2rem; /* add space before banner starts */
+      z-index: 2; /* ensure header is on top */
+      background-color: #2C2F43; /* match your header background */
+  }
 
-#header {
-  padding-top: 1rem;
-  gap: 2rem;
-      padding-bottom: 2rem; /* add space before banner starts */
-    z-index: 2; /* ensure header is on top */
-    background-color: #2C2F43; /* match your header background */
-}
-
-#portal-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 4.5rem;
-  padding-bottom: 4.5rem;
-  position: relative;
-  text-align: center;
-  color: white;
-  z-index: 500;
-}
-
-#portal-heading .highlight {
-  color: #F08400;
-  font-weight: bold;
-}
+  #portal-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 4.5rem;
+    padding-bottom: 4.5rem;
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 500;
+  }
+  
+  #portal-heading .highlight {
+    color: #F08400;
+    font-weight: bold;
+  }
 
   #banner {
     /*margin-top: 2.5rem;  /* Replace 20rem */
@@ -4562,23 +4550,24 @@ html {
   }
   
   #banner .inner {
-  padding: 0 !important;
-  margin: 0 auto;
-}
-  #banner h2 {
-  text-align: left;
-  font-size: 1.4rem;
-}
-#portal-heading {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+    padding: 0 !important;
+    margin: 0 auto;
+  }
   
-}
+  #banner h2 {
+    text-align: left;
+    font-size: 1.4rem;
+  }
 
-#banner {
-  padding-top: 3rem !important;  /* default is often 4-6rem */
-  padding-bottom: 0rem !important;
-}
+  #portal-heading {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #banner {
+    padding-top: 3rem !important;  /* default is often 4-6rem */
+    padding-bottom: 0rem !important;
+  }
 }
 
 :root {
@@ -4598,3 +4587,16 @@ html {
 /*  margin-top: -4.5rem;
 /*}
 /*}*/
+
+.orange-link {
+  pointer-events: auto;
+  color: #F08400;
+  font-weight: bold;
+  color: #F08400;
+  text-decoration: none; /* optional: remove underline */
+}
+
+.orange-link:hover {
+  text-decoration: underline; /* optional: hover behavior */
+  color: black;
+}
