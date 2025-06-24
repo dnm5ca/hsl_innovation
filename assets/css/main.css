@@ -4440,6 +4440,42 @@ html {
   color: white;
 }
 
+.orange-link {
+  pointer-events: auto;
+  color: #F08400;
+  font-weight: bold;
+  color: #F08400;
+  text-decoration: none; /* optional: remove underline */
+}
+
+.orange-link:hover {
+  text-decoration: underline; /* optional: hover behavior */
+  color: black;
+}
+#sub-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #F08400;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#sub-header {
+  opacity: 0; /* initial state */
+  animation: fadeIn 1.2s ease-out forwards;
+  animation-delay: 0.3s; /* optional: delay before it appears */
+}
+
 @media screen and (max-width: 736px) {
   /* Make header content stack vertically and center it */
 
@@ -4538,7 +4574,14 @@ html {
     color: #F08400;
     font-weight: bold;
   }
-
+#sub-header {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-align: left;
+  color: #F08400;
+}
   #banner {
     /*margin-top: 2.5rem;  /* Replace 20rem */
     /*padding-top: 1.5rem;*/
@@ -4588,15 +4631,3 @@ html {
 /*}
 /*}*/
 
-.orange-link {
-  pointer-events: auto;
-  color: #F08400;
-  font-weight: bold;
-  color: #F08400;
-  text-decoration: none; /* optional: remove underline */
-}
-
-.orange-link:hover {
-  text-decoration: underline; /* optional: hover behavior */
-  color: black;
-}
