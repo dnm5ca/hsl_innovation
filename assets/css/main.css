@@ -4547,7 +4547,7 @@ html {
     text-decoration: none;
     font-size: 0.85rem;
     margin: 0;           /* remove default margins */
-    padding: 0 4px;      /* very tight horizontal padding */
+    padding: 0 1px;      /* very tight horizontal padding */
     line-height: 1;      /* compact vertical spacing */
   }
 
@@ -4611,8 +4611,13 @@ html {
     padding-top: 3rem !important;  /* default is often 4-6rem */
     padding-bottom: 0rem !important;
   }
-}
 
+}
+@media screen and (max-width: 500px) {
+  #inno-img{
+     display: none;
+  }
+}
 :root {
   --mobile-header-height: 4.5rem;
 }
