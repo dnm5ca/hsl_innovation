@@ -176,7 +176,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 2000px) {
 
 			body, input, select, textarea {
 				font-size: 12pt;
@@ -1134,7 +1134,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 2000px) {
 
 			.row {
 				display: flex;
@@ -3060,7 +3060,7 @@ input, select, textarea {
 					width: 100%;
 				}
 
-		@media screen and (max-width: 980px) {
+		@media screen and (max-width: 2000px) {
 
 			.features article {
 				margin: 1em 2em 1em 0;
@@ -3517,7 +3517,7 @@ input, select, textarea {
 
 		}
 
-		/*@media screen and (max-width: 980px) {
+		/*@media screen and (max-width: 2000px) {
 
 			#banner {
 				padding: 12em 3em 12.375em 3em ;
@@ -3630,7 +3630,7 @@ input, select, textarea {
 
 	}
 
-	@media screen and (max-width: 980px) {
+	@media screen and (max-width: 2000px) {
 
 		#wrapper > header {
 			padding: 11em 3em 7.375em 3em ;
@@ -3669,7 +3669,7 @@ input, select, textarea {
 	.wrapper {
 		background-color: #2e3141;
 		/*margin: 6.5em 0;*/
-		position: relative;
+		/*position: relative;*/
 	}
 
 		.wrapper:before, .wrapper:after {
@@ -3975,10 +3975,9 @@ input, select, textarea {
 					box-shadow: inset 0 -1px 0 0 #2d3a69, 0 1px 0 0 #2d3a69;
 				}
 
-		@media screen and (max-width: 980px) {
-
+		@media screen and (max-width: 2000px) {
 			.wrapper {
-				margin: 4.75em 0;
+				margin: 0em 0;
 			}
 
 				.wrapper:before, .wrapper:after {
@@ -3986,16 +3985,16 @@ input, select, textarea {
 				}
 
 				.wrapper:before {
-					top: -4.75em;
+				/*	top: -4.75em;*/
 				}
 
 				.wrapper:after {
-					bottom: -4.75em;
+					/*bottom: -4.75em;*/
 					left: 0;
 				}
 
 				.wrapper .inner {
-					padding: 3em 3em 1em 3em ;
+					/*padding: 3em 3em 1em 3em ;*/
 					width: 100%;
 				}
 
@@ -4013,7 +4012,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			.wrapper {
-				margin: 2.5em 0;
+				margin: 0em 0;
 			}
 
 				.wrapper:before, .wrapper:after {
@@ -4150,7 +4149,7 @@ input, select, textarea {
 
 	}
 
-	@media screen and (max-width: 980px) {
+	@media screen and (max-width: 2000px) {
 
 		#footer {
 			margin-top: -4.75em;
@@ -4430,7 +4429,7 @@ html {
   align-self: stretch; /* Stretches the separator vertically */
 }
 .wrapper:first-of-type {
-  margin-top: 6.5rem;  /* or match your header height + buffer */
+  margin-top: 5.5rem;  /* or match your header height + buffer */
 }
 
 /* Remove top margin between consecutive wrappers */
@@ -4733,4 +4732,35 @@ html {
 #two.wrapper.style2 .card a:hover {
   color: #b94e00 !important;
    text-decoration: underline;
+}
+
+
+
+.section-divider {
+  height: 8px;
+  background: linear-gradient(to right, #F08400, #0D3268); /* Orange to Blue */
+  width: 100%;
+  margin: 0px 0;
+}
+
+.section-divider.first-divider {
+  height: 8px;
+  background: linear-gradient(to right, #F08400, #0D3268); /* Orange to Blue */
+  width: 100%;
+  margin: 14px 0;
+}
+.wrapper::before,
+.wrapper::after {
+  display: none !important;
+  content: none !important;
+  height: 0 !important;
+}
+
+.wrapper,
+.wrapper.spotlight {
+  margin: 0 !important;
+}
+
+.wrapper .inner {
+  padding: 2em 1em !important;
 }
