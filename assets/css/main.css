@@ -4764,3 +4764,21 @@ html {
 .wrapper .inner {
   padding: 2em 1em !important;
 }
+
+a.nav-logo-link,
+a.nav-logo-link:link,
+a.nav-logo-link:visited,
+a.nav-logo-link:hover,
+a.nav-logo-link:active,
+a.nav-logo-link img {
+    text-decoration: none !important; /* absolutely no underline */
+    border: none !important;          /* no image border */
+    outline: none !important;         /* no focus outline */
+    color: inherit !important;        /* no color change */
+}
+
+/* Optional: keep hover from dimming or changing */
+a.nav-logo-link:hover img {
+    filter: none !important;
+    opacity: 1 !important;
+}
